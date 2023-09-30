@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    float a, b , c;
+    char operation;
+
+    cout <<" -- SIMPLE CALCULATOR -- " << endl;
+    // Allowing user to input any two numbers
+    cout << "ENTER THE FIRST NUMBER : ";
+    cin >> a;
+
+    cout << " ENTER THE SECOND NUMBER : ";
+    cin >> b;
+    
+     //basic arithmetic operations
+    cout << "CHOOSE AN OPERATION (/, *, +, - ): ";
+    cin >> operation;
+
+    if (operation == '+') {
+        c = a + b ;
+        cout << "Result: " << a << " + " << b << " = " << c << endl;
+    } else if (operation == '-') {
+        c = a - b ;
+        cout << "Result: " << a << " - " << b << " = " << c << endl;
+    } else if (operation == '*') {
+        c = a * b;
+        cout << "Result: " << a << " * " << b << " = " << c << endl;
+    } else if (operation == '/') {
+        if (b == 0) {
+            cout << "ERROR! PLEASE ENTER A NON-ZERO SECOND NUMBER: ";
+            cin >> b ;
+             c = a / b ;
+            cout << "Result: " << a << " / " << b << " = " << c << endl;
+        } else {
+            c = a / b ;
+            cout << "Result: " << a << " / " << b << " = " << c << endl;
+        }
+    } else {
+        cout << "INVALID OPERATION. PLEASE CHOOSE +, -, *, or /." << endl;
+        
+    }
+
+    return 0;
+}
+
